@@ -5,6 +5,7 @@
 # see if they are correct
 # keep track of the score
 #tell the user their score
+import random
 
 trivia_questions = {
     "What is the correct file extension for Python files?": ".py",
@@ -18,3 +19,16 @@ trivia_questions = {
     "What does the 'break' statement do in Python loops?": "Exits the loop immediately",
     "Which operator is used for exponentiation in Python?": "**"
 }
+
+def python_trivia_game():
+    questions_list = list(trivia_questions.keys())
+    total_questions = 5
+    score = 0
+        
+    selected_questions = random.sample(questions_list, total_questions)
+    print(selected_questions,"\n")
+    
+    for index, question in enumerate(selected_questions):
+        print(f"{index+1}. {question}")
+    
+python_trivia_game()
