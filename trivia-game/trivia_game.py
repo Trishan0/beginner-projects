@@ -33,7 +33,10 @@ def python_trivia_game():
         user_answer = input("Enter your answer: ").lower().strip()
         correct_answer = trivia_questions[question]
         if user_answer == correct_answer.lower():
-            print("Correct !")
+            print("Correct !\n")
+            score +=1
         else:
-            print("Wrong !!")    
+            print(f"Wrong !! the correct answer is {correct_answer}. \n")   
+            
+    print(f"Game Over ! your final score is : {score}/{total_questions}") 
 python_trivia_game()
