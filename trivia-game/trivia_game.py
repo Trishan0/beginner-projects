@@ -1,4 +1,11 @@
 # list of questions
+# store the answers
+# randomly pick questions
+# ask the questions
+# see if they are correct
+# keep track of the score
+#tell the user their score
+
 trivia_questions = {
     "What is the correct file extension for Python files?": ".py",
     "Which keyword is used to define a function in Python?": "def",
@@ -11,9 +18,3 @@ trivia_questions = {
     "What does the 'break' statement do in Python loops?": "Exits the loop immediately",
     "Which operator is used for exponentiation in Python?": "**"
 }
-# store the answers
-# randomly pick questions
-# ask the questions
-# see if they are correct
-# keep track of the score
-#tell the user their score
