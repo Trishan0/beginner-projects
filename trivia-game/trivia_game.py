@@ -29,7 +29,6 @@ def python_trivia_game():
         score = 0
             
         selected_questions = random.sample(questions_list, total_questions)
-        print(selected_questions,"\n")
         
         for index, question in enumerate(selected_questions):
             print(f"{index+1}. {question}")
@@ -43,7 +42,13 @@ def python_trivia_game():
         
         print(f"🏆 Your final score is : {score}/{total_questions}") 
 
-        again = input("Do you want to play again ? (Y/N) ").lower().strip()
+        while True:
+            again = input("Do you want to play again ? (Y/N) ").lower().strip()
+            if again in ['y','n']:
+                break
+            else:
+                print("Invalid Input!. enter 'Y' or 'N'.")
+            
         if again != "y":
             play_again = False
             print("Thanks for Playing ! Good Bye !! 👋")
