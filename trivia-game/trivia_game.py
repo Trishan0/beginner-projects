@@ -21,22 +21,31 @@ trivia_questions = {
 }
 
 def python_trivia_game():
-    questions_list = list(trivia_questions.keys())
-    total_questions = 5
-    score = 0
-        
-    selected_questions = random.sample(questions_list, total_questions)
-    print(selected_questions,"\n")
+    play_again = True
     
-    for index, question in enumerate(selected_questions):
-        print(f"{index+1}. {question}")
-        user_answer = input("Enter your answer: ").lower().strip()
-        correct_answer = trivia_questions[question]
-        if user_answer == correct_answer.lower():
-            print("Correct !\n")
-            score +=1
-        else:
-            print(f"Wrong !! the correct answer is {correct_answer}. \n")   
+    while play_again:
+        questions_list = list(trivia_questions.keys())
+        total_questions = 5
+        score = 0
             
-    print(f"Game Over ! your final score is : {score}/{total_questions}") 
+        selected_questions = random.sample(questions_list, total_questions)
+        print(selected_questions,"\n")
+        
+        for index, question in enumerate(selected_questions):
+            print(f"{index+1}. {question}")
+            user_answer = input("Enter your answer: ").lower().strip()
+            correct_answer = trivia_questions[question]
+            if user_answer == correct_answer.lower():
+                print("✅ Correct !\n")
+                score +=1
+            else:
+                print(f"❌ Wrong !! the correct answer is {correct_answer}. \n")
+        
+        print(f"🏆 Your final score is : {score}/{total_questions}") 
+
+        again = input("Do you want to play again ? (Y/N) ").lower().strip()
+        if again != "y":
+            play_again = False
+            print("Thanks for Playing ! Good Bye !! 👋")
+            
 python_trivia_game()
