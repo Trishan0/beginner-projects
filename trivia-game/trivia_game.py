@@ -1,4 +1,16 @@
 # list of questions
+trivia_questions = {
+    "What is the correct file extension for Python files?": ".py",
+    "Which keyword is used to define a function in Python?": "def",
+    "How do you insert comments in Python code?": "#",
+    "What data type is the result of: 3 / 2 in Python?": "float",
+    "Which built-in function is used to get the length of a list in Python?": "len()",
+    "What is the output of: print(type('Hello'))?": "<class 'str'>",
+    "Which keyword is used to create a loop that iterates over a sequence?": "for",
+    "What is the correct syntax to create a dictionary in Python?": "{'key': 'value'}",
+    "What does the 'break' statement do in Python loops?": "Exits the loop immediately",
+    "Which operator is used for exponentiation in Python?": "**"
+}
 # store the answers
 # randomly pick questions
 # ask the questions
